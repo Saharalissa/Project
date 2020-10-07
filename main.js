@@ -9,6 +9,26 @@ var vitamins = [{vitamin:"A", available: ["Passion fruit","Guava","Nectarine","A
 				{vitamin:"Iron", available: ["Beans","Lentils", "Spinach", "Peanut", "Eggs", "Beef meat", "Tuna", "Checken Meat","Apricot","Mushrooms"], goodFor: "Energy, Blood strength"}
 				]
 
+var dosage = [{gender: "male", A: "200 mg", B:"50", C:"190", D:"44", E:"20", folicAcid:"10", iron:"70"},
+			  {gender: "female", A: "190 mg", B:"70", C:"170", D:"20", E:"20", folicAcid:"10", iron:"65"},
+			  {gender: "child", A: "80 mg", B:"20", C:"50", D:"7", E:"5", folicAcid:"2", iron:"40"}
+			  ]
+
+function add() {
+	var ma=document.getElementById("male");
+	var fe=document.getElementById("female");
+	var ch=document.getElementById("child");
+	
+	if (ma.checked===false && fe.checked===false && ch.checked===false) {
+		alert("PLEASE SELECT GENDER")
+ 	} else if(ma.checked) {
+     document.getElementById("result").innerHTML= "A:"+dosage[0].A+" , "+"B:"+dosage[0].B+" , "+"C:"+dosage[0].C+" , "+"D:"+dosage[0].D+" , "+"E:"+dosage[0].E+" , "+"folic Acid: "+dosage[0].folicAcid+" , "+"Iron:"+dosage[0].iron
+ 	} else if(fe.checked) {
+ 	document.getElementById("result").innerHTML= "A:"+dosage[1].A+" , "+"B:"+dosage[1].B+" , "+"C:"+dosage[1].C+" , "+"D:"+dosage[1].D+" , "+"E:"+dosage[1].E+" , "+"folic Acid: "+dosage[1].folicAcid+" , "+"Iron:"+dosage[1].iron
+ 	} else if(ch.checked) {
+ 	document.getElementById("result").innerHTML= "A:"+dosage[2].A+" , "+"B:"+dosage[2].B+" , "+"C:"+dosage[2].C+" , "+"D:"+dosage[2].D+" , "+"E:"+dosage[2].E+" , "+"folic Acid: "+dosage[2].folicAcid+" , "+"Iron:"+dosage[2].iron
+    }
+}
 
 //Vitamin A button
 var arrA = vitamins[0].available
@@ -97,24 +117,5 @@ var arrIron = vitamins[6].available
     });
   });
 
-// var dosage = [{gender: "male", A: "200 mg", B:"50", C:"190", D:"44", E:"20", folicAcid:"10", iron:"55"},
-// 			  {gender: "female", A: "190 mg", B:"70", C:"170", D:"20", E:"20", folicAcid:"10", iron:"65"}
-// 			  ]
 
-// function add() {
-// 	var ma=document.getElementById("male");
-// 	var fe=document.getElementById("female");
-// 	var ch=document.getElementById("child");
-
-	
-// 	if (ma.checked===false && fe.checked===false && ch.checked===false) {
-// 		alert("PLEASE SELECT GENDER")
-//  	} else if(ma.checked) {
-//      document.getElementById("result").innerHTML=
-//  	} else if(fe.checked) {
-//  	document.getElementById("result").innerHTML=
-//  	} else if(ch.checked) {
-//  	document.getElementById("result").innerHTML=
-//     }
-// }
 
