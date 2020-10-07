@@ -1,19 +1,36 @@
 //console.log($("#test").text)
-var vitamins = [{vitamin:"A", available: ["Passion fruit","Guava","Nectarine","Apricot","Papaya","Watermelon","Grapefruit","Mango","Spinach","Carrot"]},
-				{vitamin:"B", available: ["Sunflower Seeds","Yogurt", "Salmon", "Leafy Greens", "Brocoli", "Eggs", "Milk", "Beef and Checken Meats","Banana","avocados"]},
-				{vitamin:"C", available: ["Orange","Lemon","Brocoli","Green Pepper","Tomatoes", "Cabbage","Spinach", "peas","Strawberries","Grapefruit"]}]
+//Declare an array of object variable to hold all data for each item
+var vitamins = [{vitamin:"A", available: ["Passion fruit","Guava","Nectarine","Apricot","Papaya","Watermelon","Grapefruit","Mango","Spinach","Carrot"], goodFor: "skin, vision, immune system"},
+				{vitamin:"B", available: ["Sunflower Seeds","Yogurt", "Salmon", "Leafy Greens", "Broccoli", "Eggs", "Milk", "Checken Meat","Banana","Avocados"], goodFor: "Control hormones, Avoid Anemia"},
+				{vitamin:"C", available: ["Orange","Lemon","Brocoli","Green Pepper","Tomatoes", "Cabbage","Spinach", "peas","Strawberries","Grapefruit"], goodFor: "Improving brain activity, Improving the absorption of Iron"},
+				{vitamin:"D", available: ["Green vegetables","Yogurt","Red meat","Liver","Eggs","Milk", "Orange","Sardines", "Tuna fish","Salmon"], goodFor: "Bones, Theeth and muscles"},
+				{vitamin:"E", available: ["Sunflower Seeds","Almonds","Hazelnut Oil","Peanuts","Avocado ", "Red Sweet Pepper","Mango", "Kiwifruit","Blackberries","Olives"], goodFor: "Mental health"},
+				{vitamin:"Folic Acid", available: ["Eggs","Asparagus","Broccoli","liver","Mango ", "Soybeans","Lentils", "Spinach","Avocados", "peas"], goodFor: "Healthy cell growth "},
+				{vitamin:"Iron", available: ["Beans","Lentils", "Spinach", "Peanut", "Eggs", "Beef meat", "Tuna", "Checken Meat","Apricot","Mushrooms"], goodFor: "Energy, Blood strength"}
+				]
 
 
-
+//Vitamin A button
 var arrA = vitamins[0].available
 
- $("#vitA").click(function() {
+//  $("#vitA").click(function() {
+//  	$( ".list" ).empty();
+// 	jQuery.each( arrA, function( i, val ) { 
+//    $( ".list" ).append( "<li>"+val+"</li>" ); 
+// });
+// })
+
+$("#vitA").click(function() {
  	$( ".list" ).empty();
 	jQuery.each( arrA, function( i, val ) { 
    $( ".list" ).append( "<li>"+val+"</li>" ); 
 });
+	$(".list").toggle()
 })
 
+
+
+//Vitamin B button
 var arrB = vitamins[1].available
 
  $("#vitB").click(function() {
@@ -21,4 +38,70 @@ var arrB = vitamins[1].available
 	 jQuery.each( arrB, function( i, val ) {
 	$( ".list2" ).append( "<li>"+val+"</li>" );
 });
+	$(".list2").toggle()
 })
+
+//Vitamin C button
+ var arrC = vitamins[2].available
+
+ $("#vitC").click(function() {
+ 	$( ".list3" ).empty();
+	 jQuery.each( arrC, function( i, val ) {
+	$( ".list3" ).append( "<li>"+val+"</li>" );
+});
+	$(".list3").toggle()
+})
+
+//Vitamin D button
+ var arrD = vitamins[3].available
+
+ $("#vitD").click(function() {
+ 	$( ".list4" ).empty();
+	 jQuery.each( arrD, function( i, val ) {
+	$( ".list4" ).append( "<li>"+val+"</li>" );
+});
+	$(".list4").toggle()
+})
+
+//Vitamin E button
+ var arrE = vitamins[4].available
+
+ $("#vitE").click(function() {
+ 	$( ".list5" ).empty();
+	 jQuery.each( arrE, function( i, val ) {
+	$( ".list5" ).append( "<li>"+val+"</li>" );
+});
+	$(".list5").toggle()
+})
+
+//Folic acid button
+var arrFolic = vitamins[5].available
+
+ $("#folic").click(function() {
+ 	$( ".list6" ).empty();
+	 jQuery.each( arrFolic, function( i, val ) {
+	$( ".list6" ).append( "<li>"+val+"</li>" );
+});
+	$(".list6").toggle()
+})
+
+//Iron button
+var arrIron = vitamins[6].available
+
+ $("#iron").click(function() {
+ 	$( ".list7" ).empty();
+	 jQuery.each( arrIron, function( i, val ) {
+	$( ".list7" ).append( "<li>"+val+"</li>" );
+});
+	$(".list7").toggle()
+})
+
+//Search feature through the table in Search.html
+ $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+
+

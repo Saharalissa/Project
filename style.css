@@ -1,0 +1,66 @@
+table titles styling*/
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+/*table rows styling*/
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+/*table body styling*/
+#myInput {
+	 text-align: center;
+}
+
+/*main html page background styling*/
+.buttonList {
+	font-family: "open Sans", sans-serif;
+	background-color: #ffe6ff;
+	background-size: cover;
+	position: relative;
+	margin:center;
+	text-align:left;	
+}
+
+/*main header in main html page styling*/
+.center {
+	text-align: center;
+}
+
+/*styling divisions of all buttons*/
+.style {
+	text-align: center;
+}
+
+/*styling buttons*/
+#vitA,#vitB,#vitC,#vitD,#vitE,#folic,#iron {
+  background-color: rgb(61,26,5);
+  padding: 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 3px 2px;
+  cursor: pointer;
+  color: white;
+  border-radius: 12px;
+  /*text-align: left;*/
+}
+
+/*styling ul lists*/
+.list,.list1,.list2,.list3,.list4,.list5,.list6,.list7 {
+  text-align: left;
+	display: inline-block;
+  font-weight: bold; 
+	margin-left: auto;
+  margin-right: auto;
+  width: 8em
+}
+
+/*styling image division*/
+.column {
+  text-align: center;
+}
+
