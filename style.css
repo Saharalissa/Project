@@ -1,4 +1,4 @@
-table titles styling*/
+/*table titles styling*/
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
@@ -10,8 +10,8 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-/*table body styling*/
-#myInput {
+/*search field styling*/
+#test,#search {
 	 text-align: center;
 }
 
@@ -63,4 +63,3 @@ tr:nth-child(even) {
 .column {
   text-align: center;
 }
-

@@ -13,13 +13,6 @@ var vitamins = [{vitamin:"A", available: ["Passion fruit","Guava","Nectarine","A
 //Vitamin A button
 var arrA = vitamins[0].available
 
-//  $("#vitA").click(function() {
-//  	$( ".list" ).empty();
-// 	jQuery.each( arrA, function( i, val ) { 
-//    $( ".list" ).append( "<li>"+val+"</li>" ); 
-// });
-// })
-
 $("#vitA").click(function() {
  	$( ".list" ).empty();
 	jQuery.each( arrA, function( i, val ) { 
@@ -104,4 +97,24 @@ var arrIron = vitamins[6].available
     });
   });
 
+// var dosage = [{gender: "male", A: "200 mg", B:"50", C:"190", D:"44", E:"20", folicAcid:"10", iron:"55"},
+// 			  {gender: "female", A: "190 mg", B:"70", C:"170", D:"20", E:"20", folicAcid:"10", iron:"65"}
+// 			  ]
+
+// function add() {
+// 	var ma=document.getElementById("male");
+// 	var fe=document.getElementById("female");
+// 	var ch=document.getElementById("child");
+
+	
+// 	if (ma.checked===false && fe.checked===false && ch.checked===false) {
+// 		alert("PLEASE SELECT GENDER")
+//  	} else if(ma.checked) {
+//      document.getElementById("result").innerHTML=
+//  	} else if(fe.checked) {
+//  	document.getElementById("result").innerHTML=
+//  	} else if(ch.checked) {
+//  	document.getElementById("result").innerHTML=
+//     }
+// }
 
