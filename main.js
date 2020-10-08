@@ -1,5 +1,5 @@
 //console.log($("#test").text)
-//Declare an array of object variable to hold all data for each item
+//Declare an array of object variable to hold all data for each item in Home page
 var vitamins = [{vitamin:"A", available: ["Passion fruit","Guava","Nectarine","Apricot","Papaya","Watermelon","Grapefruit","Mango","Spinach","Carrot"], goodFor: "skin, vision, immune system"},
 				{vitamin:"B", available: ["Sunflower Seeds","Yogurt", "Salmon", "Leafy Greens", "Broccoli", "Eggs", "Milk", "Checken Meat","Banana","Avocados"], goodFor: "Control hormones, Avoid Anemia"},
 				{vitamin:"C", available: ["Orange","Lemon","Brocoli","Green Pepper","Tomatoes", "Cabbage","Spinach", "peas","Strawberries","Grapefruit"], goodFor: "Improving brain activity, Improving the absorption of Iron"},
@@ -8,12 +8,12 @@ var vitamins = [{vitamin:"A", available: ["Passion fruit","Guava","Nectarine","A
 				{vitamin:"Folic Acid", available: ["Eggs","Asparagus","Broccoli","liver","Mango ", "Soybeans","Lentils", "Spinach","Avocados", "peas"], goodFor: "Healthy cell growth "},
 				{vitamin:"Iron", available: ["Beans","Lentils", "Spinach", "Peanut", "Eggs", "Beef meat", "Tuna", "Checken Meat","Apricot","Mushrooms"], goodFor: "Energy, Blood strength"}
 				]
-
-var dosage = [{gender: "male", A: "200 mg", B:"50", C:"190", D:"44", E:"20", folicAcid:"10", iron:"70"},
+//Declare an array of objects to display daily dosage intake for each gender in DailyDosage page 
+var dosage = [{gender: "male", A: "200", B:"50", C:"190", D:"44", E:"20", folicAcid:"10", iron:"70"},
 			  {gender: "female", A: "190 mg", B:"70", C:"170", D:"20", E:"20", folicAcid:"10", iron:"65"},
 			  {gender: "child", A: "80 mg", B:"20", C:"50", D:"7", E:"5", folicAcid:"2", iron:"40"}
 			  ]
-
+//function to display dosage in DailyDosage page for each gender
 function add() {
 	var ma=document.getElementById("male");
 	var fe=document.getElementById("female");
@@ -22,14 +22,15 @@ function add() {
 	if (ma.checked===false && fe.checked===false && ch.checked===false) {
 		alert("PLEASE SELECT GENDER")
  	} else if(ma.checked) {
-     document.getElementById("result").innerHTML= "A:"+dosage[0].A+" , "+"B:"+dosage[0].B+" , "+"C:"+dosage[0].C+" , "+"D:"+dosage[0].D+" , "+"E:"+dosage[0].E+" , "+"folic Acid: "+dosage[0].folicAcid+" , "+"Iron:"+dosage[0].iron
+     document.getElementById("result").innerHTML= "(mg) "+"A:"+dosage[0].A+" , "+"B:"+dosage[0].B+" , "+"C:"+dosage[0].C+" , "+"D:"+dosage[0].D+" , "+"E:"+dosage[0].E+" , "+"folic Acid: "+dosage[0].folicAcid+" , "+"Iron:"+dosage[0].iron
  	} else if(fe.checked) {
- 	document.getElementById("result").innerHTML= "A:"+dosage[1].A+" , "+"B:"+dosage[1].B+" , "+"C:"+dosage[1].C+" , "+"D:"+dosage[1].D+" , "+"E:"+dosage[1].E+" , "+"folic Acid: "+dosage[1].folicAcid+" , "+"Iron:"+dosage[1].iron
+ 	document.getElementById("result").innerHTML= "(mg)  "+"A:"+dosage[1].A+" , "+"B:"+dosage[1].B+" , "+"C:"+dosage[1].C+" , "+"D:"+dosage[1].D+" , "+"E:"+dosage[1].E+" , "+"folic Acid: "+dosage[1].folicAcid+" , "+"Iron:"+dosage[1].iron
  	} else if(ch.checked) {
- 	document.getElementById("result").innerHTML= "A:"+dosage[2].A+" , "+"B:"+dosage[2].B+" , "+"C:"+dosage[2].C+" , "+"D:"+dosage[2].D+" , "+"E:"+dosage[2].E+" , "+"folic Acid: "+dosage[2].folicAcid+" , "+"Iron:"+dosage[2].iron
+ 	document.getElementById("result").innerHTML= "(mg)  "+"A:"+dosage[2].A+" , "+"B:"+dosage[2].B+" , "+"C:"+dosage[2].C+" , "+"D:"+dosage[2].D+" , "+"E:"+dosage[2].E+" , "+"folic Acid: "+dosage[2].folicAcid+" , "+"Iron:"+dosage[2].iron
     }
 }
 
+//functions to display vitamin buttons in Home page 
 //Vitamin A button
 var arrA = vitamins[0].available
 
@@ -109,6 +110,7 @@ var arrIron = vitamins[6].available
 	$(".list7").toggle()
 })
 
+//function to display search ressults
 //Search feature through the table in Search.html
  $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();

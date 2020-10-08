@@ -63,3 +63,23 @@ tr:nth-child(even) {
 .column {
   text-align: center;
 }
+/*background color styling for search and DailyDosage pages*/
+.background {
+  background-color: #ffe6ff;
+}
+/*styling search page list*/
+.container {
+  text-align: center;
+  font-size: 30px;
+}
+
+/*styling header in DailyDosage page*/
+/*#test {
+  text-align: center;
+}*/
+
+/*styling paragraph in search page*/
+#result {
+  text-align: center;
+  font-size: 20px;
+}
